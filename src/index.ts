@@ -15,6 +15,7 @@ button.addEventListener('click', async () => {
         const pokemon = await fetchPokemon(name);
         renderPokemon(pokemon);
     } catch (error) {
+        console.error(error);
         resultDiv.innerHTML = `<p style="color:red;">${(error as Error).message}</p>`;
     }
 });

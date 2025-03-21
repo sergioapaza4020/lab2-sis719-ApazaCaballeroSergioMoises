@@ -6,7 +6,6 @@ export function renderPokemon(pokemon: PokemonResponse): void {
     <h2>${pokemon.name.toUpperCase()}</h2>
     <p>ID: ${pokemon.id}</p>
     <p>WEIGHT: ${pokemon.weight}</p>
-    <p>TYPES: ${pokemon.types.type[0]}</p>
     <div>
         ${Object.entries(pokemon.sprites)
             .filter(([_, value]) => typeof value === "string" && value !== null)

@@ -2,8 +2,7 @@
     <h2>${t.name.toUpperCase()}</h2>
     <p>ID: ${t.id}</p>
     <p>WEIGHT: ${t.weight}</p>
-    <p>TYPES: ${t.types.type[0]}</p>
     <div>
         ${Object.entries(t.sprites).filter(([s,o])=>typeof o=="string"&&o!==null).map(([s,o])=>`<img src="${o}" alt="${s}" title="${s}" />`).join("")}
     </div>
-    `}const p=document.getElementById("searchInput"),f=document.getElementById("searchBtn"),c=document.getElementById("result");f.addEventListener("click",async()=>{const t=p.value.trim();if(t){c.innerHTML="🔄 Buscando...";try{const r=await d(t);a(r)}catch(r){c.innerHTML=`<p style="color:red;">${r.message}</p>`}}});
+    `}const f=document.getElementById("searchInput"),p=document.getElementById("searchBtn"),c=document.getElementById("result");p.addEventListener("click",async()=>{const t=f.value.trim();if(t){c.innerHTML="🔄 Buscando...";try{const r=await d(t);a(r)}catch(r){console.error(r),c.innerHTML=`<p style="color:red;">${r.message}</p>`}}});
