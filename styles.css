@@ -9,3 +9,48 @@ body {
     width: 150px;
     margin: 0.5rem;
 }
+
+.button-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.button-container button {
+    border: none;
+    background-color: transparent;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.history {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+.history button {
+    width: 60%;
+    height: 20px;
+    background-color: transparent;
+    text-transform: capitalize;
+    border-width: 1px 0px;
+    border-style: solid;
+    border-color: #000000;
+    padding: 10px 0;
+    height: fit-content;
+    cursor: pointer;
+}
+.history button:hover {
+    background-color: #d3d3d3;
+}.history button:active {
+    background-color: #d0d0d0;
+}
+
+.clear-history {
+    margin-top: 20px;
+    border: 2px solid #7b0000 !important;
+    width: 20% !important;
+    background-color: #ff0000 !important;
+    color: #ffffff;
+}
